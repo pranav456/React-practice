@@ -79,7 +79,7 @@ const Body = () => {
               setListOfRestaurants(topRatedRestaurants);
             }}
           >
-            Filter Restaurant
+            Filter Restaurant By rating
           </button>
         </div>
       </div>
