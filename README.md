@@ -34,3 +34,9 @@ Two types of Export/import:
   export const <Name>
   import {Name} from "path"
 
+
+  - two types of routing
+
+    Client side routing - on the client side only component is changed, not the entire page. This can also be called SPA(Single page Application)
+    Server side routing - request is made to server to serve the HTML
+
