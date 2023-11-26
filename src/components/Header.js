@@ -18,9 +18,10 @@ const Header = () => {
           <li><Link to='/about'>About Us</Link></li>
           <li><Link to='/contact'>Contact Us</Link></li>
           <li>Cart</li>
-          <button className="btn" onClick={() => {
+          {/* <button className="btn" onClick={() => {
             btnVariable === "Login" ? setBtnVariable("Logout") : setBtnVariable("Login")
-          }}>{btnVariable}</button>
+          }}>{btnVariable}</button> */}
+          <li><Link to='/login'>Login</Link></li>
         </ul>
       </div>
     </div>
