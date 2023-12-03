@@ -28,7 +28,7 @@
 
 .res-card{
     width: 200px;
-    /* height: 300px; */
+    height: 420px;
     /* border: 1px solid black; */
     padding:5px;
     margin: 5px;
@@ -106,4 +106,10 @@
     padding: 8px 8px;
     background-color: cadetblue;
     border-radius: 6px;
+}
+
+.user-card{
+    padding: 10px;
+    border: 1px solid black;
+    margin: 10px;
 }

@@ -40,3 +40,12 @@ Two types of Export/import:
     Client side routing - on the client side only component is changed, not the entire page. This can also be called SPA(Single page Application)
     Server side routing - request is made to server to serve the HTML
 
+
+
+- Class Based Components
+
+  - Whenever a class based component is called, a class is instantiated. When an instance of a class is   created,  a constructor is called.
+
+  - First constructor is called and then render method is called.
+  - react batches all the render phases
+

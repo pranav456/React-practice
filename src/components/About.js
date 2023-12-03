@@ -1,8 +1,10 @@
+import UserClass from "./UserClass";
 const About = () => {
     return (
-        <div>
-            <h1>Namaste React Web Series</h1>
-            <h2>This is About Us page</h2>
+        <div className="user-card">
+            <h1>About</h1>
+            <h2>Namaste React Web Series</h2>
+            <UserClass name={"Pranav S Bhargav"} location={"Bengaluru"} />
         </div>
     )
 }
