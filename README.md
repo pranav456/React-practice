@@ -49,3 +49,18 @@ Two types of Export/import:
   - First constructor is called and then render method is called.
   - react batches all the render phases
 
+
+- Modularity
+  
+  Maintaining modularity in our code leads to better testability and maintainance.
+
+- Single Responsibility principle
+  
+  Each and every part of our code(class, function etc..,) should have a single responsibility so as to make it lightweight.
+
+
+- A hook is just a utility function.
+
+- Uses of custom hook - more readable, reusable, modular
+
+
