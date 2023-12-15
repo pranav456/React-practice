@@ -113,3 +113,8 @@
     border: 1px solid black;
     margin: 10px;
 }
+
+.status-image{
+    height: 21px;
+    margin-bottom: -4px;
+}
