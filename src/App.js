@@ -9,6 +9,14 @@ import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import LoginForm from "./components/LoginForm";
 
+// Chunking
+// Code Splitting
+// Dynamic Bundling
+// Lazy Loading
+// On Demand loading
+// Dynamic import
+
+
 const About = lazy(()=>import("./components/About"))
 
 const AppLayout = () => (
