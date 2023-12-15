@@ -63,4 +63,8 @@ Two types of Export/import:
 
 - Uses of custom hook - more readable, reusable, modular
 
+React Lazy - It is a function which is used defer a component's code until it's rendered for the first time
+
+Suspense - Lets to display a fallback until its children have finished loading.
+
 
