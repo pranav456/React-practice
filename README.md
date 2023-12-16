@@ -67,4 +67,20 @@ React Lazy - It is a function which is used defer a component's code until it's 
 
 Suspense - Lets to display a fallback until its children have finished loading.
 
+sass - adds superpowers to css. writing css becomes easy and little more advanced.
 
+Different style frameworks in CSS - chakra UI, Bootstrap, Material UI, styled-components, Ant Design
+
+Tailwind CSS - A utility first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, directly in your markup.
+
+Tailwind CSS uses postCSS to transform CSS with JavaScript in the background
+
+.postcssrc - used by parcel to understand tailwind
+
+Disadvantages:
+  (i) Initial learning curve is more
+  (ii) Long lines of code should be written for complex applicaton.
+
+Advantages:
+  (i) Lightweight - bundle size is very light.
+  (ii) it's possible to build a complex UI's using tailwind.

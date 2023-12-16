@@ -8,25 +8,21 @@ const Header = () => {
   const [btnVariable,setBtnVariable] = useState("Login")
   const onlineStatus = useOnlineStatus()
   return(
-    <div className="header">
+    <div className="flex justify-between bg-pink-100 shadow-lg">
       <div className="logo-container">
-        <img
-          className="logo"
-          alt="logo"
-          src={LOGO_URL}
-        />
+        <img className="w-36" src={LOGO_URL} />
       </div>
-      <div className="nav-items">
-        <ul>
-          <li>Online Status:{<img className="status-image" src={onlineStatus?online:"offline"}/>}</li>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to='/about'>About Us</Link></li>
-          <li><Link to='/contact'>Contact Us</Link></li>
-          <li>Cart</li>
+      <div className="flex items-center">
+        <ul className="flex p-6 m-6">
+          <p className="px-4">Online Status:{<img className="w-5 inline-block" src={onlineStatus?online:"offline"}/>}</p>
+          <li className="px-4"><Link to="/">Home</Link></li>
+          <li className="px-4"><Link to='/about'>About Us</Link></li>
+          <li className="px-4"><Link to='/contact'>Contact Us</Link></li>
+          <li className="px-4">Cart</li>
           {/* <button className="btn" onClick={() => {
             btnVariable === "Login" ? setBtnVariable("Logout") : setBtnVariable("Login")
           }}>{btnVariable}</button> */}
-          <li><Link to='/login'>Login</Link></li>
+          <li className="px-4"><Link to='/login'>Login</Link></li>
         </ul>
       </div>
     </div>
