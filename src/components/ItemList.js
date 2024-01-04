@@ -4,8 +4,8 @@ const ItemList = ({ items }) => {
     return (
         <div>
             {
-                items.map((item) => (
-                    <div>
+                items.map((item,index) => (
+                    <div key={index}>
                         <ul>
                             {
                                 item.itemCards.map((data) => (
