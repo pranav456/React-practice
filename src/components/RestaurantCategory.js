@@ -2,9 +2,11 @@ import { useState } from "react";
 import downArrow from "../assets/down-arrow.png"
 import ItemList from "./ItemList";
 const RestaurantCategory = (props) => {
+    const [toggle,setToggle] = useState(false)
     console.log(props.showItems)
     const handleClick = () => {
         props.setShowIndex()
+        setToggle(!toggle)
 
     }
     return (
@@ -14,7 +16,7 @@ const RestaurantCategory = (props) => {
                 <span><img className="w-5 h-5" src={downArrow} alt="" /></span>
                 
             </div>
-           {props.showItems && <ItemList items={props.data.categories} />} 
+           {props.showItems && toggle && <ItemList items={props.data.categories} />} 
         </div>
     )
 }
