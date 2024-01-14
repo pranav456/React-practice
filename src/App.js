@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useEffect, useState,useContext } from "react";
+import React, { lazy, Suspense, useEffect, useState, useContext } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -9,6 +9,9 @@ import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import LoginForm from "./components/LoginForm";
 import userContext from "./utils/userContext";
+import { Provider } from "react-redux"; //Acts as bridge between store and app
+import appStore from "./utils/appStore";
+import Cart from "./components/Cart";
 
 // Chunking
 // Code Splitting
@@ -25,22 +28,25 @@ const AppLayout = () => {
 
   const [userName, setUserName] = useState();
 
-  useEffect (()=>{
+  useEffect(() => {
     //Make an API call and send username and password
     const data = {
-      name:"Pranav Bhargav",
+      name: "Pranav Bhargav",
     }
     setUserName(data.name)
 
-  },[])
+  }, [])
 
   return (
-    <userContext.Provider value = {{loggedInUser: userName,setUserName}}>
-    <div className="app">
-      <Header />
-      <Outlet />
-    </div>
-    </userContext.Provider>
+    //Providing store to the app
+    <Provider store={appStore}>
+      <userContext.Provider value={{ loggedInUser: userName, setUserName }}>
+        <div className="app">
+          <Header />
+          <Outlet />
+        </div>
+      </userContext.Provider>
+    </Provider>
   )
 };
 
@@ -72,6 +78,10 @@ const appRouter = createBrowserRouter([
       {
         path: '/login',
         element: <LoginForm />
+      },
+      {
+        path: '/cart',
+        element:<Cart/>
       }
     ],
     errorElement: <Error />,

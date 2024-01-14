@@ -84,3 +84,17 @@ Disadvantages:
 Advantages:
   (i) Lightweight - bundle size is very light.
   (ii) it's possible to build a complex UI's using tailwind.
+
+
+
+# Redux toolkit(RTK library):
+
+  - Install @reduxjs/toolkit
+  - Install react-redux
+  - Configure the store
+  - Dispatch action
+  - Access data from store using selectors.
+
+
+
+
