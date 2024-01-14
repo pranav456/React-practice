@@ -1,9 +1,10 @@
 import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import resData from "../utils/mockData";
-import { useEffect, useState } from "react";
+import { useEffect, useState,useContext } from "react";
 import ShimmerUI from "./ShimmerUI";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import userContext from "../utils/userContext";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -28,11 +29,11 @@ const Body = () => {
       console.log(json);
       //Optional Chaining
       setListOfRestaurants(
-        json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+        json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants
       );
       setFilteredRestaurant(
-        json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+        json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants
       );
 
@@ -58,6 +59,11 @@ const Body = () => {
 
     )
   }
+
+  const data = useContext(userContext)
+  console.log(data)
+  const {loggedInUser,setUserName} = useContext(userContext)
+  console.log(setUserName)
 
   return listOfRestaurants.length === 0 ? (
     <ShimmerUI />
@@ -99,6 +105,11 @@ const Body = () => {
             >
               Filter Restaurant By rating
             </button>
+          </div>
+          <div className="search m-4 p-4 flex items-center">
+            <label className="m-2 p-2">UserName</label>
+            <input className="border border-black" value={loggedInUser} onChange={(e)=>setUserName(e.target.value)}/>
+
           </div>
         </div>
 
